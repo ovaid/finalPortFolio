@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="icon" type="image/x-icon" href="./logoImages/file-person.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./footer.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+  <title>Home Page</title>
+
+
+  <style>
+    body{
+        background-color: #333;
+    }
+    .navbar {
+      background-color: #333;
+    }
+
+    .navbar a {
+      color: white;
+    }
+
+    .navbar a:hover {
+      color: lightgray;
+    }
+
+    .top-header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out;
+      
+    }
+
+
+    @keyframes spin {
+      0% {
+        transform: rotateY(0);
+      }
+      100% {
+        transform: rotateY(365deg);
+      }
+    }
+    .profile-image:hover{
+        transform: rotate(360deg);
+    
+    }
+    .navbar-brand img{
+        height: 90px;
+        width: 90px;
+        border: none;
+        border-radius: 50%;
+        object-fit: cover;
+        /* transition: transform 0.5s ease-in-out; */
+        animation: spin 3s linear infinite;
+    }
+
+    .navbar-brand img:hover{
+        animation: none;
+    }
+    .about-section {
+      background-color: #f8f9fa;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .about-image {
+      max-width: 300px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+     .about-section {
+      /* background-image; */
+      background-color: transparent;
+      color: grey;
+      padding: 50px 0;
+      text-align: center;
+      opacity: 0; /* Initially set to transparent */
+      transform: translateX(-100px); /* Initially positioned to the left */
+      transition: opacity 0.5s ease, transform 0.5s ease; /* Adding transitions */
+    }
+
+    .about-image {
+      max-width: 300px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      font-size: 18px;
+      line-height: 1.6;
+      color: whitesmoke
+    }
+
+    /* Add a class to trigger the animation when scrolled into view */
+    .about-animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* footer */
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 24px;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #1abc9c;
+    }
+
+    .mail-icon {
+      font-size: 30px;
+      margin-top: 20px;
+    }
+
+    .mail-icon:hover {
+      color: #e74c3c;
+    }
+
+    .down-button {
+      background-color: #1abc9c;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      float: right;
+      text-decoration: none;
+    }
+
+    .down-icon {
+      margin-left: 10px;
+    }
+    /* body{
+        background-image: url(./images/charlesdeluvio-Lks7vei-eAg-unsplash.jpg);
+    } */
+  </style>
+</head>
+<body>
+ <div class="container-fluid">
+    <!-- <div class="row"> -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+              <a target="_blank"  class="navbar-brand" href="http://github.com/ovaid"><img src="./logoImages/RR image.jpg" alt=""></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  
+                  <li class="nav-item">
+                    <a target="_blank"  class="nav-link" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a target="_blank"  class="nav-link" href="#about-section">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a target="_blank"  class="nav-link" href="./Skills.html">Skills</a>
+                  </li>
+                  <li target="_blank"  class="nav-item">
+                    <a target="_blank"  class="nav-link" href="./Project.html">Projects</a>
+                  <li class="nav-item">
+                    <a target="_blank"  class="nav-link" href="./Contacts.html">Contact</a>
+                  </li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    <!-- </div> -->
+    
+    <!-- <div class="row"> -->
+
+      
+          
+        <div class="top-header">
+            <img src="./logoImages/OvaidDP.jpg" alt="Profile Image" class="profile-image">
+            <h1>Rameez Raja</h1>
+            <p>Full Stack Developer</p>
+            <a href="#about-section" class="down-button">
+                Scroll Down
+              <i class="fas fa-arrow-down down-icon"></i>
+            </a>
+          </div>
+    <!-- </div> -->
+
+    <div class="container">
+        <div class="about-section" id="about-section">
+          <img  style="border-radius: 50%;" src="./images/oskar-yildiz-gy08FXeM2L4-unsplash.jpg" alt="Profile Image" class="about-image">
+          <h2>About Me</h2>
+          <p class="about-text">
+            Hi there! I'm Rameez Raja, a passionate web developer and designer. With a strong background in devloping Ui. I strive to create user-friendly and visually appealing websites. I believe in the power of designing a code . When I'm not coding, you can find me at Cricket and Athelete Stadiums. Let's connect and bring your ideas to life! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quibusdam facilis tempora quod distinctio laboriosam beatae? Vitae sunt ea cumque fuga? Quidem deleniti consequatur beatae iusto sit dolore delectus, veniam laudantium aliquid illo ut eos pariatur reiciendis perspiciatis impedit. Exercitationem harum cumque quae quidem quibusdam? Molestias, cum in. Ipsa sint officia error facilis quibusdam magni, porro pariatur commodi repellendus, nihil voluptatibus, illum perferendis quas quisquam inventore fugiat consequatur alias maiores deleniti dolores voluptate a modi culpa. Vel esse praesentium suscipit magni, maiores molestiae minus doloribus animi. Illo dignissimos magni sec Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, placeat nisi eum excepturi voluptates, laudantium hic ipsam asperiores maxime recusandae illum, consequatur minima itaque consectetur voluptate enim dolore ad obcaecati. Quae, ipsam accusantium! Atque sequi ex, repudiandae illum eos, quaerat delectus ea tempora doloribus perferendis ipsa possimus ratione iste rem facilis nobis deleniti neque adipisci assumenda nihil officia similique est ducimus? Similique obcaecati sint itaque laboriosam. Vel quisquam quis sunt excepturi inventore minus quas ut, illo mollitia. Nobis officiis labore provident alias animi praesentium fugit cupiditate aut placeat, dolorum nisi tempora laudantium, aliquam quod ducimus, sint maiores molestias est omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsam aspernatur reprehenderit accusamus harum quidem, minus cum voluptates necessitatibus iusto aliquid? Voluptatibus, incidunt beatae. Quasi, quod alias doloribus saepe quas voluptas aspernatur quisquam placeat possimus et quo ullam iste dolorum natus excepturi asperiores aliquid quam veritatis perferendis. Animi iusto adipisci quod quidem ipsam nobis laborum minus tempora neque? Adipisci ad possimus perferendis dignissimos quibusdam voluptas a atque accusantium, expedita sunt hic non beatae exercitationem molestiae ut alias, nisi fugit. A quas perferendis doloremque similique at sunt, ipsa earum, rem recusandae consectetur ab reprehenderit facere repudiandae dolore! Consequuntur quaerat tempore sunt!
+          </p>
+        </div>
+      </div>
+      
+ <!-- footer  -->
+   <!-- Site footer -->
+   <footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                    <div class="logo-widget footer-widget">
+                        <figure class="logo-box"><a href="#"><img src="./logoImages/About Image.jpg" alt=""></a></figure>
+                        <div class="text">
+                            <p>Lorem ipsum dolor amet consectetur adi pisicing elit sed eiusm tempor incididunt ut labore dolore magna aliqua enim ad minim veniam quis.nostrud exercita.laboris nisi ut aliquip ea commodo conse quatuis aute irure.</p>
+                        </div>
+                        <ul class="footer-social">
+                            <li><a target="_blank"  href="http://facebook.com/in/ovaidmushtaq"><i class="fab fa-facebook-f"><img src="./logoImages/facebook.svg" alt=""></i></a></li>
+                            <li><a target="_blank"  href="http://twitter.com/in/ovaidmushtaq0418"><i class="fab fa-twitter"></i><img src="./logoImages/twitter.svg" alt=""></a></li>
+                            <li><a target="_blank" href="http://github.com/ovaid"><i class="fab fa-vimeo-v"></i><img src="./logoImages/github.svg" alt=""></a></li>
+                            <li><a target="_blank"  href="http://linkedin.com/in/rameeza0418"><i class="fab fa-google-plus-g"><img src="./logoImages/linkedin.svg" alt=""></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 offset-lg-2 footer-column">
+                    <div class="service-widget footer-widget">
+                        <div class="footer-title">Services</div>
+                        <ul class="list">
+                            <li><a target="_blank"  href="http://github.com/ovaid">Ui Designing</a></li>
+                            <li><a target="_blank"  href="http://github.com/ovaid">MentorpShip</a></li>
+                            <li><a target="_blank"  href="http://github.com/ovaid">Java language Course</a></li>
+                            <li><a target="_blank"  href="http://github.com/ovaid">Backend Development</a></li>
+                            <li><a target="_blank"  href="http://github.com/ovaid">Creating Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                    <div class="contact-widget footer-widget">
+                        <div class="footer-title">Contacts</div>
+                        <div class="text">
+                            <p>Lorem Ipsum, ovaid mushtaq, srinagar kashmir </p>
+                            <p>+91 9797054815</p>
+                            <p>ovaid@example.com</p>
+                            <!-- <li><a target="_blank" href="http://github.com/ovaid"><img src="./logoImages/github.svg" alt=""></a></li>
+                            <li><a target="_blank"  class="li" href="http://github.com/ovaid">github</a></li>
+                            <li><a  target="_blank" class="li" href="http://linkedin.com/in/rameeza0418">linkedIn</a></li>
+                            <li><a  target="_blank" class="li" href="http://instgram.com/in/ovaidmushtaq">instgram</a></li>
+                            <li><a  target="_blank" class="li" href="http://facebook.com/in/ovaidmushtaq">mail</a></li> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- main-footer end -->
+<div class="footer-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 column">
+                <div class="copyright"><a href="#">Rameez</a> &copy; 2023 All Right Reserved</div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 column">
+                <ul class="footer-nav">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Content for different pages goes here -->
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+
+     window.addEventListener("scroll", function() {
+      var aboutSection = document.querySelector(".about-section");
+      var aboutPosition = aboutSection.getBoundingClientRect().top;
+      var screenHeight = window.innerHeight;
+
+      if (aboutPosition < screenHeight) {
+        aboutSection.classList.add("about-animate");
+      }
+    });
+
+
+    // scroll button 
+    $(document).ready(function() {
+        $(".down-button").click(function(){
+            $(".navbar-brand").scrollTop();
+            
+        })
+       
+      $(".down-button").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: $("#about-section").offset().top }, 800);
+       })
+      })
+     </script>
+  </body>
+</html>
